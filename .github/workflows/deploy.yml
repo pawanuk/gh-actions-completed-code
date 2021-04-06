@@ -2,9 +2,9 @@
 name: Deploy
 
 on:
-  branch:
+  workflow_run:
     workflows:
-      - test
+     - test
     types:
       - completed
 
