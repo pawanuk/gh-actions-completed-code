@@ -1,7 +1,12 @@
 ---
 name: Deploy
 
-on: [push]
+on:
+  workflow_run:
+    workflows:
+      - Test
+    types:
+      - completed
 
 jobs:
   deploy:
